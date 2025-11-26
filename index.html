@@ -224,6 +224,24 @@
       color: var(--color-primary); font-weight: 700; font-family: var(--font-display);
     }
 
+    /* --- Workflow --- */
+    .workflow-container {
+      display: flex; flex-direction: column; align-items: center; gap: 2rem; padding: 2rem 0;
+    }
+    .workflow-step {
+      background: var(--color-surface); border: var(--glass-border); border-radius: 12px; padding: 2rem;
+      width: 100%; max-width: 800px; display: flex; align-items: center; gap: 2rem;
+      transition: transform 0.3s;
+    }
+    .workflow-step:hover { transform: translateX(10px); border-color: var(--color-teal); }
+    .step-icon {
+      font-size: 2.5rem; color: var(--color-teal); background: rgba(20, 184, 166, 0.1);
+      padding: 1.5rem; border-radius: 50%;
+    }
+    .step-content h4 { margin: 0 0 0.5rem 0; color: white; font-size: 1.2rem; }
+    .step-content p { margin: 0; font-size: 0.9rem; color: var(--color-text-muted); }
+    .workflow-arrow { color: var(--color-text-muted); font-size: 1.5rem; opacity: 0.5; }
+
     /* --- Footer --- */
     footer {
       background: #020617; padding: 4rem 0; text-align: center;
@@ -235,6 +253,7 @@
       .nav-links.active { display: flex; }
       .mobile-menu-btn { display: block; }
       h1 { font-size: 2.5rem; }
+      .workflow-step { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
@@ -249,6 +268,7 @@
       <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
       <div class="nav-links">
         <a href="#abstract" class="nav-link">Abstract</a>
+        <a href="#workflow" class="nav-link">Workflow</a>
         <a href="#methodology" class="nav-link">Methodology</a>
         <a href="#analysis" class="nav-link">Analysis</a>
         <a href="#discussion" class="nav-link">Discussion</a>
@@ -316,6 +336,55 @@
       <div class="stat-card reveal" style="transition-delay: 0.3s;">
         <div class="stat-value text-gradient">19%</div>
         <div class="stat-label">Modeled IRR</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow Section -->
+  <section id="workflow" class="section container">
+    <div class="reveal" style="margin-bottom: 3rem; text-align: center;">
+      <h2>System Workflow Architecture</h2>
+      <p style="max-width: 600px; margin: 0 auto;">A linear progression from ecological threat to economic asset.</p>
+    </div>
+    
+    <div class="workflow-container reveal">
+      <!-- Step 1 -->
+      <div class="workflow-step">
+        <div class="step-icon"><i class="fa-solid fa-water"></i></div>
+        <div class="step-content">
+          <h4>1. Transboundary Influx</h4>
+          <p>River systems carry mixed MSW and microplastics from upstream nations into the delta region.</p>
+        </div>
+      </div>
+      <div class="workflow-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+      
+      <!-- Step 2 -->
+      <div class="workflow-step">
+        <div class="step-icon"><i class="fa-solid fa-robot"></i></div>
+        <div class="step-content">
+          <h4>2. Autonomous Interception</h4>
+          <p>Bubble barriers divert surface flow while robotic ASVs retrieve waste from hazardous eddies.</p>
+        </div>
+      </div>
+      <div class="workflow-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+
+      <!-- Step 3 -->
+      <div class="workflow-step">
+        <div class="step-icon"><i class="fa-solid fa-filter"></i></div>
+        <div class="step-content">
+          <h4>3. MRF Separation</h4>
+          <p>Material Recovery Facility sorts organics, metals, and plastics using magnetic and density separators.</p>
+        </div>
+      </div>
+      <div class="workflow-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+
+      <!-- Step 4 -->
+      <div class="workflow-step">
+        <div class="step-icon"><i class="fa-solid fa-industry"></i></div>
+        <div class="step-content">
+          <h4>4. Industrial Valorization</h4>
+          <p>Organics -> Biogas; Plastics -> Gasification (Energy) or Composite Matrix (Eco-Bricks).</p>
+        </div>
       </div>
     </div>
   </section>
@@ -511,7 +580,7 @@
       <div style="margin-bottom: 1.5rem;">
         <span class="text-gradient" style="font-family: var(--font-display); font-weight: 700; font-size: 1.5rem;">PROJECT W.A.T.E.R.</span>
       </div>
-      <p>Principal Researcher: Cadet Razin, Rajshahi Cadet College.</p>
+      <p>Principal Researcher: Abdul Muhit Razin.</p>
       <div style="margin-top: 2rem; display: flex; gap: 1.5rem; justify-content: center; font-size: 1.25rem;">
         <a href="#" style="color: white; opacity: 0.7; transition: opacity 0.3s;"><i class="fa-solid fa-envelope"></i></a>
         <a href="#" style="color: white; opacity: 0.7; transition: opacity 0.3s;"><i class="fa-brands fa-researchgate"></i></a>
